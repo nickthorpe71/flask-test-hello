@@ -10,6 +10,8 @@ def index():
 @app.route('/hello')
 def hello():
     name = request.args.get("name")
+    if not name: 
+        return render_template("fail.html")
     return render_template("hello.html", name=name);
 
 if __name__ == '__main__':
