@@ -1,14 +1,8 @@
-<!DOCTYPE html>
+{% extends "layout.html" %}
 
-<html lang="en">
-	<head>
-		<title> Hello! </title>
-	</head>
-	<body>
-		<form action="/hello">
-			<input name="name" type="text">
-			<input type="submit">
-		</form>
-	</body>
-
-</html>
+{% block body %}
+	<form action="/hello">			
+		<input name="name" type="text">
+		<input type="submit">
+	</form>
+{% endblock %}
