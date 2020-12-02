@@ -1,3 +1,5 @@
+# SETUP: https://realpython.com/flask-by-example-part-1-project-setup/
+
 from flask import Flask
 app = Flask(__name__)
 
