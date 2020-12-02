@@ -1,15 +1,16 @@
 # SETUP: https://realpython.com/flask-by-example-part-1-project-setup/
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 app = Flask(__name__)
 
 @app.route('/')
-def hello():
+def index():
     return render_template("index.html")
 
-@app.route('/bye')
-def bye():
-    return "Googbye"
+@app.route('/hello')
+def hello():
+    name = request.args.get("name")
+    return render_template("hello.html", name=name);
 
 if __name__ == '__main__':
     app.run()
